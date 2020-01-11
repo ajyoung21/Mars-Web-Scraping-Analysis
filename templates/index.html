@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Visit the...</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+      <p><h3>Latest Mars News</h3></p>
+      <p><h5>{{mars['Part One']['November 15, 2019']['Title']}}</h1></p>
+        <ul>
+          <li> {{mars['Part One']['November 15, 2019']['Paragraph']}}</li>
+          <li>{{mars['Part One'].keys()}}</li>
+        </ul>
+    </div>
+    <h2>Featured Mars Image:</h2>
+    <p><img src = " {{mars['Part Two'][0]}} ", height="300"></p>
+    <h3></h3>
+
+    <p><h3>Current Weather on Mars:</h3></p>
+    {{mars['Part Three'][0]}}
+    <p><h3>Part Four:</h3></p>
+    <table>{{mars['Part Four'][0]}}
+    <p><h3>Part Five:</h3></p>
+    <div class="container-fluid">
+    <div class='row'>
+    <p>{{mars['Part Five'][0]['title']}}</p>
+ <p><img src = " {{mars['Part Five'][0]['img_url']}} ", height="300"></p>
+
+  <p> {{mars['Part Five'][1]['title']}} </p> 
+  <p><img src = " {{mars['Part Five'][1]['img_url']}} ", height="300"></p>
+    </div>
+  </div>
+  <p> {{mars['Part Five'][2]['title']}}</p>
+  <p><img src = " {{mars['Part Five'][2]['img_url']}} ", height="300"></p>
+  <p> {{mars['Part Five'][3]['title']}}</p>
+  <p><img src = " {{mars['Part Five'][3]['img_url']}} ", height="300"></p>
+  <h6>Max Temp: {{ mars }}</h6>
+</body>
+
+</html>
